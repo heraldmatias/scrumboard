@@ -1,9 +1,0 @@
-setup.py
-src/core/__init__.py
-src/core/decorators.py
-src/core/forms.py
-src/scrumboard.egg-info/PKG-INFO
-src/scrumboard.egg-info/SOURCES.txt
-src/scrumboard.egg-info/dependency_links.txt
-src/scrumboard.egg-info/requires.txt
-src/scrumboard.egg-info/top_level.txt
