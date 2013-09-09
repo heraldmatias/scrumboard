@@ -1,5 +1,5 @@
 # Django settings for scrumboard project.
-from .utils import here
+from .utils import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -57,7 +57,7 @@ MEDIA_URL = '/static/uploads/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = realpath(join(SYSTEM_PATH, 'static'))
 
 STATIC_URL = '/static/'
 # URL prefix for admin static files -- CSS, JavaScript and images.
@@ -67,7 +67,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    here('static'),
+    #here('static'),
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
@@ -110,7 +110,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'project.urls'
 
-TEMPLATE_DIRS = (here('templates'),)
+TEMPLATE_DIRS = realpath(join(SYSTEM_PATH, 'templates'))
 
 INSTALLED_APPS = (
     'django.contrib.auth',
