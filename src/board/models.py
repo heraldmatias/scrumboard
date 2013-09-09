@@ -72,4 +72,4 @@ def create_stages(sender, **kwargs):
             key, label = stage
             instance.stage_set.get_or_create(order=order, title = key)
 
-post_save.connect(create_stages, sender=Board)
+#post_save.connect(create_stages, sender=Board)
