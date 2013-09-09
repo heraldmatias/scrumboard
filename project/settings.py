@@ -32,7 +32,7 @@ TIME_ZONE = 'America/Chicago'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ES'
 
 SITE_ID = 1
 
@@ -125,6 +125,9 @@ INSTALLED_APPS = (
     'board',
 )
 
+LOCALE_PATHS = (
+    realpath(join(SYSTEM_PATH, 'locale')),
+)
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error.

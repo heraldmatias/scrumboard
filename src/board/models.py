@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.db.models.aggregates import Max, Count
+from django.utils.translation import ugettext as _
 from django.db.models.signals import post_save
 from django.utils.encoding import smart_unicode
 
@@ -12,12 +13,14 @@ class Board(models.Model):
         return smart_unicode(self.title)
 
 STAGE_CHOICES = (
-    ('archive', 'Archive'),
-    ('todo', 'Todo'),
-    ('progress', 'Progress'),
-    ('review', 'Review'),
-    ('done', 'Done'),
+    ('archive', _('Archive')),
+    ('todo', _('Todo')),
+    ('progress', _('Progress')),
+    ('review', _('Review')),
+    ('done', _('Done')),
 )
+
+
 class Stage(models.Model):
     board = models.ForeignKey(Board)
     order = models.IntegerField()
