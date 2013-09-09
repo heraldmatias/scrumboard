@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: scrumboard
+Version: 1.0
+Summary: Scrum
+Home-page: UNKNOWN
+Author: Herald Matias Olivares
+Author-email: heraldmatias.oz@gmail.com
+License: GPL V. 3
+Description: installation;
+        
+            $ virtualenv --no-site-packages scrum-env
+            $ cd scrum-env
+            $ source bin/activate
+            $ git clone git://github.com/fatiherikli/scrumboard.git
+            $ cd scrumboard
+            $ pip install -r requirements.txt
+            $ python scrumboard/manage.py runserver
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Dev
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GPL License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP
